@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link rel="shortcut icon" href="/favicon.ico">
+<title><%= title %></title>
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+</head>
+<%
+var list = '';
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+for (i = 0; i < journals.length; i++) {
+  if(i!=0) list += '<hr>'
+
+  list += '<section id="' + journals[i]._id + '">'
+  list += '<img src="images/del.svg" onclick="del(this.parentElement)">'
+  list += '<h2>' + journals[i].heading + '</h2>'
+  list += '<h4>' + journals[i].composed.toLocaleDateString("en-US", options) + '</h4>'
+  list +=  '<p>' + nl2br(journals[i].text) + '</p>'
+  list += '</section>'
+}
+
+function nl2br(str) {
+	return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br>$2');
+}
+%>
+<body>
+  <header>
+    <div class="widthNormalizer">
+      <h1>The <%= title %></h1>
+    </div>
+</header>
+
+<main>
+  <div class="widthNormalizer">
+    <%- list %>
+
+    <img id="compose" src="images/compose.svg" onclick="location.href='./compose/'">
+  </div>
+</main>
+
+<footer>
+  <div class="widthNormalizer">
+      <p>With &hearts; from <a href="https://faisalakhtar.github.io/" target="_blank">Faisal</a></p>
+  </div>
+</footer>
+
+<script src="javascripts/delete.js"></script>
+</body>
+</html>

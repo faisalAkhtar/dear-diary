@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link rel="shortcut icon" href="/favicon.ico">
+<title><%= title %></title>
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div class="widthNormalizer">
+      <h1><%= title %></h1>
+    </div>
+  </header>
+  <main>
+    <div class="widthNormalizer">
+      <section>
+        <form id="formcompose" name="compose" method="post" action="/journals">
+          <input id="inputheading" type="text" placeholder="heading" name="heading" required autofocus/>
+          <textarea id="inputtext" type="text" placeholder="text" name="text" required></textarea>
+          <button id="btnSubmit" type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="widthNormalizer">
+        <p>With &hearts; from <a href="https://faisalakhtar.github.io/" target="_blank">Faisal</a></p>
+    </div>
+  </footer>  
+</body>
+</html>
