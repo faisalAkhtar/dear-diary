@@ -1,5 +1,5 @@
 function del(section) {
-    if(confirm("Are you sure you want to delete \"" + section.childNodes[1].innerText + "\"")) {
+    if(confirm("Are you sure you want to delete \"" + section.childNodes[1].innerText + "\" ?")) {
         let xhr = new XMLHttpRequest();
         xhr.open("DELETE", "/journals/" + section.id, true);
         xhr.onload = function() {

@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   var db = req.db;
   var journals = db.get('journals');
-  journals.find({}, {}, function(e,docs) {
+  journals.find({}, {sort: {composed: -1}, limit: 10}, function(e,docs) {
     res.render('index', {
       title: 'Daily Journal',
       'journals': docs

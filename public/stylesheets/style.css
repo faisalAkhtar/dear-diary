@@ -12,7 +12,7 @@ a{color:inherit;text-underline-position:under;-ms-text-underline-position:under;
 .widthNormalizer{max-width:1050px;width:90%;margin:0 auto;}
 header,footer{width:100%;}
 header{position:fixed;top:0;left:0;background-color:#1c2026;}
-footer{bottom:0;background-color:#0c1016;text-align:right;}
+footer{bottom:0;background-color:#0c1016;}
 main{padding:3em 0 0;background:linear-gradient(#1c2026 10%,#0c1016 100%);min-height:calc(100vh - 3.5em);}
 section{margin:50px 0;text-align:justify;}
 section img{float:right;width:35px;cursor:pointer;}
@@ -21,8 +21,16 @@ section h2{margin-block-end:0;}
 section h4{margin-block-start:0;color:#aaa;font-weight:normal;}
 hr{border-color:#5a5a5a;}
 
-input,button,textarea{font-size:100%;font-family:Nunito,sans-serif;padding:5px 12px;outline:none;display:block;margin:10% auto;border-radius:5px;}
-input,textarea{background-color:inherit;color:inherit;border-color:#0c1016;border-bottom:1px solid #ccc;max-width:500px;width:95%;}
+input,button,textarea{font-size:100%;font-family:Nunito,sans-serif;outline:none;display:block;margin:10% auto;border-radius:5px;}
+input,textarea{background-color:inherit;color:inherit;border-color:transparent;box-shadow:inset 0 0 5px#0c1016;padding:12px 15px;width:100%;}
 textarea{resize:vertical;height:25vh;}
-button{cursor:pointer;}
-#compose{color:#f1f1f1;width:3em;position:fixed;bottom:50px;cursor:pointer;}
+button{cursor:pointer;padding:5px 12px;margin-bottom:0;}
+#compose{color:#f1f1f1;width:2.5em;position:fixed;bottom:25px;cursor:pointer;filter:drop-shadow(2px 4px 2px #0c1016);}
+
+@media screen and (max-width:600px) {
+  body{font-size:14px;}
+}
+
+@media screen and (max-width:1050px) and (orientation:landscape) {
+    body{font-size:14px;}
+}

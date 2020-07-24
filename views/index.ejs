@@ -9,16 +9,16 @@
 <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
 </head>
 <%
-var list = '';
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-for (i = 0; i < journals.length; i++) {
-  if(i!=0) list += '<hr>'
+var options = { month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
 
+var list = '';
+for (i = 0; i < journals.length; i++) {
   list += '<section id="' + journals[i]._id + '">'
-  list += '<img src="images/del.svg" onclick="del(this.parentElement)">'
+  list += '<img src="images/del.svg" title="Delete this entry" onclick="del(this.parentElement)">'
   list += '<h2>' + journals[i].heading + '</h2>'
   list += '<h4>' + journals[i].composed.toLocaleDateString("en-US", options) + '</h4>'
   list +=  '<p>' + nl2br(journals[i].text) + '</p>'
+  if(i+1!=journals.length) list += '<hr>'
   list += '</section>'
 }
 
@@ -37,7 +37,7 @@ function nl2br(str) {
   <div class="widthNormalizer">
     <%- list %>
 
-    <img id="compose" src="images/compose.svg" onclick="location.href='./compose/'">
+    <img id="compose" title="Add new entry" src="images/compose.svg" onclick="location.href='./compose/'">
   </div>
 </main>
 
@@ -47,6 +47,7 @@ function nl2br(str) {
   </div>
 </footer>
 
+<script src="javascripts/compose.js"></script>
 <script src="javascripts/delete.js"></script>
 </body>
 </html>
