@@ -8,8 +8,6 @@
 
 A fully responsive, cross-browser functional e-journal. It supports UTF-8 format, so you can use emojis and pour your hear out to your dearest diary. It comes with MongoDB to ensure fast access to the data(as it stores the working set in it's internal memory) and easily scalable database for multiple users, if need be.
 
-A fully responsive, cross-browser functional e-journal with basic [functionalities](#features) to [create](#file-editor), [edit](#file-editor), [rename](#renaming-files) or [delete](#deleting-files) a file and [view it's information](#file-information) in a [discretely](#sign-in) allocated [space](#personal-file-space-allocated) for the user.
-
 <p align="center">
   <img src="screenshots/GIF.gif" alt="Dear-diary GIF" width="600">
   <br>
