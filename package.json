@@ -1,10 +1,21 @@
 {
   "name": "dear-diary",
-  "version": "0.0.0",
+  "version": "1.0.0",
+	"description": "My journal",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/faisalAkhtar/dear-diary.git"
+	},
+	"author": "Faisal",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/faisalAkhtar/dear-diary/issues"
+	},
+	"homepage": "https://github.com/faisalAkhtar/dear-diary#readme",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
@@ -15,5 +26,8 @@
     "mongodb": "^3.5.9",
     "monk": "^7.3.0",
     "morgan": "~1.9.1"
+	},
+	"engines": {
+		"node": "10.19"
   }
 }
