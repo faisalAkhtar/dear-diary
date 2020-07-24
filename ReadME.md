@@ -59,8 +59,6 @@ All scripts, stylesheets and markups are distributed under the [MIT](LICENSE) li
 
 ## Acknowledgements
 
-- File management and handling was inspired from [Linux file systems](https://www.linux.org/)
-
 - Hand clipart was taken from [here](https://svg-clipart.com/icon/oGK8NhS-hand-writing-clipart)
 
 - Some icons in this READme were borrowed from [here](https://commons.wikimedia.org/wiki/Main_Page)
